@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "aksserviceanil-f5c3"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "aksserviceanil-f5c3"
+  template:
+    metadata:
+      labels:
+        app: "aksserviceanil-f5c3"
+    spec:
+      containers:
+        - name: "aksserviceanil-f5c3"
+          image: "creganil.azurecr.io/aksserviceanil"
+          ports:
+          - containerPort: 80
