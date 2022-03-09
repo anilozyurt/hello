@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+    name: "aksserviceanil-f5c3"
+    labels:
+        app: "aksserviceanil-f5c3"
+spec:
+    type: LoadBalancer
+    ports:
+    - port: 80
+      targetPort: 80
+      protocol: TCP
+      name: http
+    selector:
+        app: "aksserviceanil-f5c3"
